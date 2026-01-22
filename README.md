@@ -1,15 +1,49 @@
-# Darius Göttert Quiz App
+# 👥 Person Quiz App - German Entrepreneurs Edition
 
-A modern, interactive quiz web application about Darius Göttert from Munich, built with React and Vite.
+A modern, interactive quiz web application featuring **4 German entrepreneurs**, built with React and Vite. Test your knowledge about startup founders and venture builders!
 
-## 🚀 Features
+## 🎯 Featured Persons
 
-- **Modern UI Design**: Beautiful gradient backgrounds and smooth animations
-- **Interactive Quiz**: Multiple choice questions with instant feedback
-- **Progress Tracking**: Visual progress bar showing quiz completion
-- **Score Display**: Detailed results with percentage and encouraging messages
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Smooth Transitions**: Animated screen changes for better user experience
+### 🚀 Darius Göttert
+Venture Builder & General Partner of Young Founders Fund (€10M) from Munich
+
+### 💼 Ben Erler  
+Chairman of Young Founders Network, B. Erler Ventures UG founder
+
+### ⚡ Philipp Schmechel
+Co-founder of Trimlog (Logistics-Tech) & QiTech Recycling (Sustainability)
+
+### 🎨 Katharina Zieße Suari
+LMU München student, Marketing/Videography entrepreneur, Etsy shop owner
+
+## ✨ Features
+
+- **🎨 Person Selection Screen**: Beautiful gradient cards with animations
+- **📊 4 Complete Quizzes**: 40 questions total (10 per person)
+- **💡 Interactive Learning**: Instant feedback with detailed explanations
+- **📈 Progress Tracking**: Visual progress bar for each quiz
+- **🎯 Score Display**: Percentage-based results with encouraging messages
+- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile
+- **🎭 Smooth Animations**: Professional transitions and hover effects
+- **🔄 Multi-Quiz Support**: Switch between persons easily
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Start Development Server
+
+```bash
+npm run dev
+```
+
+### 3. Open in Browser
+
+Navigate to `http://localhost:5173` and start exploring!
 
 ## 📋 Project Structure
 
@@ -17,91 +51,131 @@ A modern, interactive quiz web application about Darius Göttert from Munich, bu
 darius-quiz-app/
 ├── src/
 │   ├── components/
-│   │   ├── Quiz.jsx          # Main quiz logic and state management
+│   │   ├── PersonSelector.jsx    # 👥 NEW: Person selection screen
+│   │   ├── PersonSelector.css    # 🎨 NEW: Selection styles
+│   │   ├── Quiz.jsx              # 🔄 Main quiz logic (updated)
 │   │   ├── Quiz.css
-│   │   ├── StartScreen.jsx   # Welcome screen
+│   │   ├── StartScreen.jsx       # 🔄 Welcome screen (updated)
 │   │   ├── StartScreen.css
-│   │   ├── Question.jsx      # Question display and answer handling
+│   │   ├── Question.jsx          # Question display
 │   │   ├── Question.css
-│   │   ├── Results.jsx       # Results screen with score
+│   │   ├── Results.jsx           # 🔄 Results screen (updated)
 │   │   └── Results.css
-│   ├── quizData.js           # Quiz questions and answers (UPDATE THIS!)
-│   ├── App.jsx
+│   ├── data/
+│   │   └── personQuizzes.js      # 📊 NEW: 3 new person quizzes
+│   ├── quizData.js               # Original Darius quiz
+│   ├── App.jsx                   # 🔄 Main app (updated)
 │   ├── App.css
 │   └── main.jsx
 ├── package.json
 └── README.md
 ```
 
-## 🛠️ Installation & Setup
+## 🎮 How to Play
 
-1. **Navigate to the project directory:**
-   ```bash
-   cd darius-quiz-app
-   ```
+1. **Select a Person**
+   - Start screen shows 4 gradient cards
+   - Each card represents a different entrepreneur
+   - Click any card to start their quiz
 
-2. **Install dependencies** (already done):
-   ```bash
-   npm install
-   ```
+2. **Answer Questions**
+   - 10 multiple-choice questions per person
+   - Click your answer to submit
+   - Instant feedback with explanation
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+3. **View Results**
+   - See your score and percentage
+   - Get an encouraging message
+   - Choose to retry or select another person
 
-4. **Open in browser:**
-   - The app will run on `http://localhost:5173`
-   - Click the URL in the terminal or open it manually
+4. **Explore More**
+   - Return to selection screen
+   - Try all 4 quizzes
+   - Learn about each entrepreneur
 
-## ⚠️ IMPORTANT: Update Quiz Questions
+## 📊 Quiz Content Breakdown
 
-The app currently contains **placeholder questions** that need to be replaced with actual information about Darius Göttert.
+### Darius Göttert (10 Questions)
+- Location and origin (Munich, moved at 16)
+- Young Founders Fund (€10M GP)
+- Early entrepreneurship (age 15, record watches)
+- Ventures: inGemeinschaft, Spreadly, 3Bears
+- Investment portfolio: TasyAI, FORA, Infinite Print
+- Startup incubator near Stachus
 
-**To update the quiz:**
+### Ben Erler (10 Questions)
+- B. Erler Ventures UG (Viersen)
+- Young Founders Network Chairman
+- Current location (Darmstadt)
+- Munich startup scene activity
+- TechTailor, Startup in School
+- EUpreneur membership
 
-1. Open `src/quizData.js`
-2. Replace placeholder questions with real information about Darius
-3. Update the options arrays with correct choices
-4. Set the correct answer index (0-3)
-5. Add meaningful explanations
+### Philipp Schmechel (10 Questions)
+- Origins (Krefeld)
+- Trimlog logistics-tech startup
+- QiTech Recycling (sustainable plastic)
+- Education (Gymnasium am Stadtpark)
+- Sports (Sailing, Triathlons)
+- Startup Teens involvement
+- Geographic journey (Krefeld → Kiel → Darmstadt)
 
-**Example structure:**
-```javascript
-{
-  id: 1,
-  question: "Your actual question here?",
-  options: [
-    "Option A",
-    "Option B",
-    "Option C",
-    "Option D"
-  ],
-  correctAnswer: 1, // Index of correct option (0-3)
-  explanation: "Explanation of the correct answer."
-}
+### Katharina Zieße Suari (10 Questions)
+- Hometown (Kronberg) → Current (München)
+- LMU München student
+- Etsy entrepreneurship (2 shops: jewelry & bags)
+- Wire crystal jewelry designer
+- Entrepreneurship Talent Akademie
+- Young Founders Network Munich
+- Creative focus (Marketing, Branding, Videography)
+
+## 🎨 Design & UX
+
+### Color Themes (Gradients)
+- **Darius:** Purple (`#667eea → #764ba2`)
+- **Ben:** Blue (`#3b82f6 → #1e40af`)
+- **Philipp:** Green (`#10b981 → #047857`)
+- **Katharina:** Pink (`#ec4899 → #9333ea`)
+
+### Animations
+- Fade-in on selection screen
+- Staggered card entrance (100ms delay each)
+- Hover lift and scale effects
+- Smooth transitions between screens
+- Emoji rotation on hover
+
+### Responsive Breakpoints
+- **Desktop:** 3-column grid (1024px+)
+- **Tablet:** 2-column grid (768px - 1023px)
+- **Mobile:** Single column (< 768px)
+
+## 🛠️ Development
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server with hot reload
+npm run build    # Create production build
+npm run preview  # Preview production build locally
+npm run lint     # Run ESLint checks
 ```
 
-## 🎨 Customization
+### Tech Stack
 
-### Colors
-The app uses a purple gradient theme. To change colors, update:
-- `src/components/Quiz.css` - Background gradient
-- `src/components/StartScreen.css` - Button colors
-- Other component CSS files as needed
-
-### Questions
-- Add or remove questions in `src/quizData.js`
-- Each question supports 4 options
-- Include explanations for better learning experience
+- **React 19** - UI framework
+- **Vite 7** - Build tool & dev server
+- **CSS3** - Styling with gradients and animations
+- **ESLint** - Code quality
 
 ## 📱 Responsive Design
 
-The app is fully responsive and tested on:
-- Desktop (1920px+)
-- Laptop (1024px - 1920px)
-- Tablet (768px - 1024px)
-- Mobile (320px - 768px)
+Fully tested on:
+- ✅ Desktop (1920px+)
+- ✅ Laptop (1024px - 1920px)
+- ✅ Tablet (768px - 1024px)
+- ✅ Mobile (320px - 768px)
+- ✅ iOS Safari
+- ✅ Android Chrome
 
 ## 🚀 Deployment
 
@@ -111,81 +185,112 @@ The app is fully responsive and tested on:
 npm run build
 ```
 
-This creates an optimized build in the `dist/` folder.
-
 ### Deploy Options
 
-**Option 1: Vercel**
+**GitHub Pages** (Recommended)
+```bash
+# Update vite.config.js base path
+npm run build
+# Deploy dist folder to gh-pages branch
+```
+
+**Vercel**
 ```bash
 npm install -g vercel
 vercel
 ```
 
-**Option 2: Netlify**
+**Netlify**
 ```bash
 npm install -g netlify-cli
 netlify deploy --prod --dir=dist
 ```
 
-**Option 3: GitHub Pages**
-1. Update `vite.config.js`:
-   ```javascript
-   export default defineConfig({
-     base: '/darius-quiz-app/',
-     plugins: [react()],
-   })
-   ```
-2. Build and deploy:
-   ```bash
-   npm run build
-   ```
-3. Push the `dist` folder to gh-pages branch
+## 📚 Documentation
 
-## 🧪 Development Commands
+- **[PERSON_QUIZZES_README.md](./PERSON_QUIZZES_README.md)** - Detailed person quiz documentation
+- **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - Original project summary
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment guide
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint (if configured)
+## 🎓 Educational Value
 
-## 📝 Quiz Flow
+Learn about:
+- German startup ecosystem
+- Entrepreneurial journeys
+- Company founding stories
+- Geographic startup hubs
+- Professional backgrounds
+- Personal interests of founders
 
-1. **Start Screen**: Welcome message and quiz introduction
-2. **Questions**: Display one question at a time with 4 options
-3. **Answer Feedback**: Immediate feedback with explanation
-4. **Progress Bar**: Visual indicator of quiz progress
-5. **Results**: Final score with percentage and message
-6. **Restart**: Option to retake the quiz
+## 💡 Key Features
 
-## 🎯 Next Steps
+### Person Selection
+- Modern card-based interface
+- Unique gradient for each person
+- Emoji icons for visual identity
+- Smooth hover animations
+- Mobile-optimized layout
 
-1. ✅ Project structure created
-2. ✅ Components built and styled
-3. ✅ Quiz logic implemented
-4. ⚠️ **WAITING**: Add real quiz questions about Darius Göttert
-5. 🔜 Test the application
-6. 🔜 Deploy to production
+### Quiz Experience
+- 10 questions per person
+- 4 answer options each
+- Instant feedback
+- Educational explanations
+- Progress visualization
+- Final score with percentage
 
-## 💡 Tips
+### Quality of Life
+- Back navigation between screens
+- Retry same quiz
+- Switch to different person
+- Responsive on all devices
+- Fast load times
+- Smooth transitions
 
-- Keep questions clear and concise
-- Use 4 options per question for consistency
-- Add explanations to make the quiz educational
-- Test on mobile devices before deployment
-- Consider adding more questions (7-10 is ideal)
+## 📈 Statistics
+
+- **Total Quizzes:** 4
+- **Total Questions:** 40
+- **Answer Options:** 160
+- **Lines of Code:** ~800 (including new features)
+- **Components:** 7
+- **Data Files:** 2
 
 ## 🤝 Contributing
 
-To add or modify quiz content:
-1. Edit `src/quizData.js`
-2. Save the file
-3. The dev server will hot-reload automatically
+To add more person quizzes:
+
+1. Research the person thoroughly
+2. Create 10 diverse questions in `src/data/personQuizzes.js`
+3. Add person card in `src/components/PersonSelector.jsx`
+4. Choose unique gradient and emoji
+5. Test thoroughly
+6. Submit pull request
+
+## 🔄 Version History
+
+**v2.0.0** (January 2026) - **CURRENT**
+- ✨ Added 3 new person quizzes
+- ✨ Person selection screen
+- ✨ 30 new questions
+- ♻️ Enhanced UI/UX
+- 📱 Improved mobile experience
+
+**v1.0.0** (Previous)
+- Initial Darius Göttert quiz
 
 ## 📄 License
 
 This project is created for educational/personal purposes.
 
+## 🙏 Acknowledgments
+
+- Quiz content based on publicly available information
+- Built with React, Vite, and modern web technologies
+- Designed with accessibility and user experience in mind
+
 ---
 
-**Created with React + Vite**
-**Waiting for research information about Darius Göttert to complete the quiz questions.**
+**Built with ❤️ using React + Vite**
+
+**Ready to play?** Run `npm run dev` and visit `http://localhost:5173`
